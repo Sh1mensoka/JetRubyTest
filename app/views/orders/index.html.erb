@@ -1,0 +1,17 @@
+<h1>Orders</h1>
+
+<ul>
+  <% @orders.each do |order| %>
+    <li>
+      <a href="<%= order_path(order) %>">
+        <%= "#{order.name} #{order.s_name} #{order.patronymic}" %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<button>
+  <a href="<%= new_order_url(@order) %>">
+    Create Order
+  </a>
+</button>

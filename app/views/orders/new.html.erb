@@ -1,0 +1,104 @@
+<h1>New Order</h1>
+
+<%= form_with model: @order do |form| %>
+
+  <div>
+    Name<br>
+    <%= form.text_field :name %>
+    <% @order.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    Second name<br>
+    <%= form.text_area :s_name %>
+    <% @order.errors.full_messages_for(:s_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    Patronymic<br>
+    <%= form.text_field :patronymic %>
+    <% @order.errors.full_messages_for(:patronymic).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    Phone<br>
+    <%= form.text_area :phone %>
+    <% @order.errors.full_messages_for(:phone).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    E-mail<br>
+    <%= form.text_field :email %>
+    <% @order.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    Weight<br>
+    <%= form.text_area :weight %>
+    <% @order.errors.full_messages_for(:weight).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    Length<br>
+    <%= form.text_field :length %>
+    <% @order.errors.full_messages_for(:length).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    Width<br>
+    <%= form.text_area :width %>
+    <% @order.errors.full_messages_for(:width).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    Height<br>
+    <%= form.text_field :height %>
+    <% @order.errors.full_messages_for(:height).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    Departure address<br>
+    <%= form.text_area :dep_address %>
+    <% @order.errors.full_messages_for(:dep_address).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    Arrival address<br>
+    <%= form.text_area :arr_address %>
+    <% @order.errors.full_messages_for(:arr_address).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>
+
+<button>
+  <a href="<%= orders_path(@order) %>">
+    Show Orders
+  </a>
+</button>
+
